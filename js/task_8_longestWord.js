@@ -3,18 +3,16 @@
 //строку, яка складається зі слів з пробілами і повертає найдовше слово
 
 const findLongestWord = function (string) {
-    string = string.split(' ')
-    let longestWord = string[0]
+    const words = string.split(' ') //трансформуємо строку в масив строк
+    let longestWord = string[0] //використовуємо в змінній перший елемент з нульовим індексом
+    // console.log(longestWord)
+
+    for (const word of words) { //перебираємо масив слів
+        if (word.length > longestWord.length)
+            longestWord = word
+    }
     console.log(longestWord)
 
-    for (const str of string) {
-        
-
-        if (longestWord > str.length)
-            
-        console.log(str) 
-    }
-    
 }
 
 findLongestWord('The quick brown fox jumped over the lazy dog')
