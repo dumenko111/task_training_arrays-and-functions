@@ -4,8 +4,7 @@
 
 const findLongestWord = function (string) {
     const words = string.split(' ') //трансформуємо строку в масив строк
-    let longestWord = string[0] //використовуємо в змінній перший елемент з нульовим індексом
-    // console.log(longestWord)
+    let longestWord = string[0] //використовуємо в змінній перший елемент з нульовим індексом для порівняння з іншими елементами в масиві
 
     for (const word of words) { //перебираємо масив слів
         if (word.length > longestWord.length)
